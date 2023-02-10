@@ -11,17 +11,14 @@ public class Main {
             System.out.println();
         }
     }
-    static void multiplication(int[][] arr,int a, int b,int[][] arr1, int c, int d){
-        if (b != c){
-            System.out.println("Invalid, input plz retry:");
-            return;
-        }
+    static void multiplication(int[][] arr,int[][] arr1){
+       
           int[][] mul = new int[arr.length][arr[0].length];
         for (int i = 0; i < arr.length; i++){
             for (int j = 0; j < arr[i].length; j++){
-               for (int k = 0; k < c; k++){
+               
                    mul[i][j] = arr[i][j] * arr1[i][j];
-               }
+               
             }
         }
         result(mul);
@@ -56,20 +53,20 @@ public class Main {
         d = sc.nextInt();
         System.out.println("Enter the value of matrix :");
         int[][] arr1 = new int[c][d];
-        for (int i = 0; i < arr.length; i++){
-            for (int j = 0; j < arr[i].length; j++){
-                arr[i][j] = sc.nextInt();
+        for (int i = 0; i < arr1.length; i++){
+            for (int j = 0; j < arr1[i].length; j++){
+                arr1[i][j] = sc.nextInt();
             }
         }
         System.out.println("Secondly, printing the original value of second matrix :");
-        for (int i = 0; i < arr.length; i++){
-            for (int j = 0; j < arr[i].length; j++){
-                System.out.print(" " + arr[i][j]);
+        for (int i = 0; i < arr1.length; i++){
+            for (int j = 0; j < arr1[i].length; j++){
+                System.out.print(" " + arr1[i][j]);
             }
             System.out.println();
         }
         System.out.println();
         System.out.println("Printing the result :");
-        multiplication(arr,a,b,arr1,c,d);
+        multiplication(arr,arr1);
     }
 }
